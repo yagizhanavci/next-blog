@@ -1,4 +1,4 @@
-import { mdxComponents, Page } from "@/components";
+import { ArrowLeft, IconButton, mdxComponents, Page } from "@/components";
 import { Post } from "@/models";
 import { getMdxNode, getMdxPaths } from "next-mdx";
 import { useHydrate } from "next-mdx/client";
@@ -16,11 +16,18 @@ const PostPage: React.FC<IPostProps> = ({ post }) => {
       <Head>
         <title>{post.frontMatter.title} | Yağızhan Avcı</title>
       </Head>
+      <div className="flex justify-start sticky top-[56px] bg-white dark:bg-black py-2">
+        <IconButton
+          text="Posts"
+          icon={<ArrowLeft className="w-6 h-6" />}
+          href="/posts"
+        />
+      </div>
       <article className="mt-4 prose">
         <h1>{post.frontMatter.title}</h1>
         <p>{post.frontMatter.excerpt}</p>
-        <span>{post.frontMatter.date}</span>
-        <hr className="my-4" />
+        <span className="text-gray-500">{post.frontMatter.date}</span>
+        <hr />
         {content}
       </article>
     </Page>

@@ -13,14 +13,12 @@
     U+FEFF, U+FFFD;
 }
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  body {
-    @apply font-sans text-black dark:text-white bg-white dark:bg-black;
-  }
+body {
+  @apply font-sans text-black dark:text-white bg-white dark:bg-black;
 }
 
 @layer components {
@@ -29,6 +27,13 @@
   }
   .container {
     @apply max-w-2xl mx-auto px-4;
+  }
+  .content {
+    min-height: calc(100vh - 100px);
+  }
+  .footer {
+    height: 44px;
+    @apply flex items-center justify-end;
   }
   .header {
     @apply flex items-center justify-between sticky top-0 z-50 bg-white dark:bg-black;
@@ -71,5 +76,15 @@
   }
   .toggle__checkbox:checked + .toggle__slider:before {
     @apply translate-x-8;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span {
+    @apply text-black dark:text-white;
   }
 }

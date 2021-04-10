@@ -1,25 +1,15 @@
-import { Header } from "@/components";
-import Head from "next/head";
+import { Footer, Header } from "@/components";
 
 interface IPageProps {}
 
 export const Page: React.FC<IPageProps> = ({ children }) => {
   return (
-    <>
-      <Head>
-        <link
-          rel="preload"
-          href="/fonts/inter-var-latin.woff2"
-          as="font"
-          crossOrigin=""
-        />
-      </Head>
-      <div className="root">
-        <div className="container">
-          <Header />
-          {children}
-        </div>
+    <div className="root">
+      <div className="container">
+        <Header />
+        <div className="flex flex-col flex-grow content">{children}</div>
+        <Footer />
       </div>
-    </>
+    </div>
   );
 };

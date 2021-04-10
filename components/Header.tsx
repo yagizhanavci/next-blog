@@ -1,4 +1,5 @@
 import { Moon, Sun, Toggle } from "@/components";
+import { useTheme } from "@/hooks";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
@@ -6,7 +7,7 @@ import * as React from "react";
 interface IHeaderProps {}
 
 export const Header: React.FC<IHeaderProps> = () => {
-  const [theme, setTheme] = React.useState<boolean>(false);
+  const theme = useTheme();
 
   const { pathname } = useRouter();
 
@@ -26,21 +27,21 @@ export const Header: React.FC<IHeaderProps> = () => {
               </a>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/repos">
               <a className={pathname.includes("/repos") ? "active" : ""}>
                 Repos
               </a>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <Toggle
         prefixContent={<Sun />}
         suffixContent={<Moon />}
         name="theme"
-        onToggle={setTheme}
-        value={theme}
+        onToggle={theme.onToggle}
+        value={theme.isDarkTheme}
       />
     </header>
   );

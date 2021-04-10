@@ -1,9 +1,25 @@
+import { Header } from "@/components";
+import Head from "next/head";
+
 interface IPageProps {}
 
 export const Page: React.FC<IPageProps> = ({ children }) => {
   return (
-    <div className="bg-white dark:bg-black min-w-screen min-h-screen">
-      <div className="max-w-2xl mx-auto">{children}</div>
-    </div>
+    <>
+      <Head>
+        <link
+          rel="preload"
+          href="/fonts/inter-var-latin.woff2"
+          as="font"
+          crossOrigin=""
+        />
+      </Head>
+      <div className="root">
+        <div className="container">
+          <Header />
+          {children}
+        </div>
+      </div>
+    </>
   );
 };

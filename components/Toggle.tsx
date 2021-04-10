@@ -14,23 +14,21 @@ export const Toggle: React.FC<IToggleProps> = ({
   suffixContent,
 }) => {
   return (
-    <div className="flex items-center toggle">
+    <div className="toggle">
       {prefixContent !== undefined && (
         <div className="mr-2">{prefixContent}</div>
       )}
-      <div className="relative">
+      <label className="toggle__container" htmlFor={name}>
         <input
           id={name}
           name={name}
           type="checkbox"
           checked={value}
           onChange={() => onToggle(!value)}
-          className="hidden"
+          className="toggle__checkbox"
         />
-        <label htmlFor={name}>
-          <div />
-        </label>
-      </div>
+        <span className="toggle__slider" />
+      </label>
       {suffixContent !== undefined && (
         <div className="ml-2">{suffixContent}</div>
       )}

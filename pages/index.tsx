@@ -9,7 +9,6 @@ const Home = () => {
         <title>Home | Yağızhan Avcı</title>
       </Head>
       <h1>Next Blog</h1>
-      <div className="h-screen"></div>
     </Page>
   );
 };

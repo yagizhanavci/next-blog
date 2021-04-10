@@ -1,35 +1,3 @@
-import { classnames } from "tailwindcss-classnames";
-
-// container
-const containerClassnames = classnames(
-  "relative",
-  "w-32",
-  "h-8",
-  "focus:outline-none",
-  "ring-indigo-500",
-  "cursor-pointer",
-  "rounded-md",
-);
-const offDefaultContainerClassnames = classnames("bg-black");
-const onDefaultContainerClassnames = classnames("bg-blue-500");
-// const offDarkContainerClassnames = classnames("bg-white");
-// const onDarkContainerClassnames = classnames("bg-blue-500");
-
-//thumb
-const thumbClassnames = classnames(
-  "absolute",
-  "transition-transform",
-  "transform",
-  "left-0",
-  "top-0",
-  "h-8",
-  "w-8",
-  "rounded-2xl",
-  "bg-white",
-);
-const offDefaultThumbClassnames = classnames();
-const onDefaultThumbClassnames = classnames("translate-x-full");
-
 interface IToggleProps {
   prefixContent?: React.ReactNode;
   suffixContent?: React.ReactNode;
@@ -59,19 +27,8 @@ export const Toggle: React.FC<IToggleProps> = ({
           onChange={() => onToggle(!value)}
           className="hidden"
         />
-        <label
-          htmlFor={name}
-          className={classnames(containerClassnames, {
-            [onDefaultContainerClassnames]: value,
-            [offDefaultContainerClassnames]: !value,
-          })}
-        >
-          <div
-            className={classnames(thumbClassnames, {
-              [onDefaultThumbClassnames]: value,
-              [offDefaultThumbClassnames]: !value,
-            })}
-          />
+        <label htmlFor={name}>
+          <div />
         </label>
       </div>
       {suffixContent !== undefined && (

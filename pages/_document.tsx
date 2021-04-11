@@ -13,7 +13,7 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
         </Head>
-        <body className="font-sans text-black bg-white dark:bg-black dark:text-white">
+        <body className="font-sans antialiased text-black bg-white dark:bg-black dark:text-white">
           <Main />
           <NextScript />
         </body>

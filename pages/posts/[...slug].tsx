@@ -19,11 +19,11 @@ const PostPage: React.FC<IPostProps> = ({ post }) => {
       <div className="flex justify-start sticky top-[56px] bg-white dark:bg-black py-2">
         <IconButton
           text="Posts"
-          icon={<ArrowLeft className="w-6 h-6" />}
+          icon={<ArrowLeft className="w-6 h-6 text-indigo-500" />}
           href="/posts"
         />
       </div>
-      <article className="mt-4 prose">
+      <article className="mt-4 prose prose-black dark:prose-white lg:prose-lg">
         <h1>{post.frontMatter.title}</h1>
         <p>{post.frontMatter.excerpt}</p>
         <span className="text-gray-500">{post.frontMatter.date}</span>

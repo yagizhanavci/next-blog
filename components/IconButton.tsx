@@ -20,7 +20,7 @@ export const IconButton: React.FC<IconButtonProps> = ({
       <a
         href={href}
         target="_blank"
-        className={`flex items-center self-start ${
+        className={`flex items-center self-start text-black dark:text-white ${
           text !== undefined ? "px-4" : "px-2"
         } py-2 text-indigo-500 transition-colors rounded-full hover:bg-opacity-30 hover:bg-indigo-500`}
       >
@@ -33,12 +33,14 @@ export const IconButton: React.FC<IconButtonProps> = ({
     return (
       <Link href={href}>
         <a
-          className={`flex items-center self-start ${
+          className={`flex items-center self-start text-black dark:text-white ${
             text !== undefined ? "px-4" : "px-2"
           } py-2 text-indigo-500 transition-colors rounded-full hover:bg-opacity-30 hover:bg-indigo-500`}
         >
           {icon}
-          {text !== undefined && <span className="ml-2">{text}</span>}
+          {text !== undefined && (
+            <span className="ml-2 text-black dark:text-white">{text}</span>
+          )}
         </a>
       </Link>
     );
@@ -46,7 +48,7 @@ export const IconButton: React.FC<IconButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`flex items-center self-start ${
+      className={`flex items-center self-start text-black dark:text-white ${
         text !== undefined ? "px-4" : "px-2"
       } py-2 text-indigo-500 transition-colors rounded-full hover:bg-opacity-30 hover:bg-indigo-500`}
     >

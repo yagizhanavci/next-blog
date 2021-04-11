@@ -1,5 +1,6 @@
 export * from "./ArrowLeft";
 export * from "./CssIcon";
+export * from "./ForkIcon";
 export * from "./Github";
 export * from "./HtmlIcon";
 export * from "./JsIcon";
@@ -7,4 +8,8 @@ export * from "./LinkedinIcon";
 export * from "./Moon";
 export * from "./NodeIcon";
 export * from "./ReactIcon";
+export * from "./RepoIcon";
+export * from "./SearchIcon";
+export * from "./StarIcon";
 export * from "./Sun";
+export * from "./WatchIcon";

@@ -27,13 +27,13 @@ export const Header: React.FC<IHeaderProps> = () => {
               </a>
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link href="/repos">
               <a className={pathname.includes("/repos") ? "active" : ""}>
                 Repos
               </a>
             </Link>
-          </li> */}
+          </li>
         </ul>
       </nav>
       <Toggle

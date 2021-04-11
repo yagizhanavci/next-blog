@@ -77,14 +77,28 @@ body {
   .toggle__checkbox:checked + .toggle__slider:before {
     @apply translate-x-8;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  span {
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6,
+  .prose p,
+  .prose span,
+  .prose code,
+  .prose strong {
     @apply text-black dark:text-white;
+  }
+  .loader div {
+    animation-duration: 0.7s;
+  }
+  .loader div:first-child {
+    animation-delay: 0.1s;
+  }
+  .loader div:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  .loader div:last-child {
+    animation-delay: 0.6s;
   }
 }

@@ -1,6 +1,7 @@
 import { ForkIcon, RepoIcon, StarIcon, WatchIcon } from "@/components";
 import { IRepo } from "@/models";
 import * as React from "react";
+import { DotIcon } from "./Icons";
 
 interface IRepoCardProps {
   repo: IRepo;
@@ -38,7 +39,36 @@ export const RepoCard: React.FC<IRepoCardProps> = React.memo(({ repo }) => {
           <ForkIcon className="w-4 h-4 mr-1 min-w-[16px] text-gray-700 dark:text-gray-400" />
           {repo.forks_count}
         </span>
+        {repo.language !== null && (
+          <span className="flex items-center text-sm text-gray-700 dark:text-gray-400">
+            <DotIcon className={getDotClassNames(repo.language)} />
+            {repo.language}
+          </span>
+        )}
       </div>
     </div>
   );
 });
+
+const getDotClassNames = (language: string) => {
+  const classNames: string[] = ["w-4", "h-4", "mr-1", "min-w-[16px]"];
+
+  switch (language) {
+    case "TypeScript":
+      classNames.push("text-ts");
+      break;
+    case "JavaScript":
+      classNames.push("text-js");
+      break;
+    case "CSS":
+      classNames.push("text-css");
+      break;
+    case "Vue":
+      classNames.push("text-vue");
+      break;
+    default:
+      classNames.push("text-gray-700", "dark:text-gray-400");
+  }
+
+  return classNames.join(" ");
+};

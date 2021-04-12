@@ -1,6 +1,5 @@
 import { Page, PostCard, Searchbar } from "@/components";
 import { getAllNodes, Node, NodeFrontMatter } from "next-mdx/server";
-import Head from "next/head";
 import React from "react";
 
 interface IPostsProps {
@@ -26,10 +25,7 @@ const Posts: React.FC<IPostsProps> = ({ posts }) => {
   };
 
   return (
-    <Page>
-      <Head>
-        <title>Posts | Yağızhan Avcı</title>
-      </Head>
+    <Page title="Posts - Yağızhan Avcı">
       <h1 className="mb-4 text-2xl font-bold tracking-tight text-black my-7 md:text-3xl dark:text-white">
         All Posts ({filteredPosts.length})
       </h1>

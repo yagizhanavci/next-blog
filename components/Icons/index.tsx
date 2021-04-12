@@ -1,5 +1,6 @@
 export * from "./ArrowLeft";
 export * from "./CssIcon";
+export * from "./DotIcon";
 export * from "./ForkIcon";
 export * from "./Github";
 export * from "./HtmlIcon";

@@ -1,5 +1,4 @@
 import { Loader, Page, RepoCard, Searchbar } from "@/components";
-import Head from "next/head";
 import React, { useEffect } from "react";
 
 interface IReposProps {}
@@ -36,10 +35,7 @@ const Repos: React.FC<IReposProps> = () => {
   };
 
   return (
-    <Page>
-      <Head>
-        <title>Repos | Yağızhan Avcı</title>
-      </Head>
+    <Page title="Repos - Yağızhan Avcı">
       <h1 className="mb-4 text-2xl font-bold tracking-tight text-black my-7 md:text-3xl dark:text-white">
         All Repositories ({filteredRepos.length})
       </h1>

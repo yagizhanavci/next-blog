@@ -3,7 +3,7 @@ export * from "./Header";
 export * from "./IconButton";
 export * from "./Icons";
 export * from "./Loader";
-export * from "./mdx-components";
+export * from "./MDXComponents";
 export * from "./Page";
 export * from "./PostCard";
 export * from "./RepoCard";

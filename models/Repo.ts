@@ -5,4 +5,5 @@ export interface IRepo {
   watchers_count: number;
   stargazers_count: number;
   forks_count: number;
+  language: string | null;
 }

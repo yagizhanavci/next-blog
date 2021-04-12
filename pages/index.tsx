@@ -6,15 +6,11 @@ import {
   Page,
   ReactIcon,
 } from "@/components";
-import Head from "next/head";
 import React from "react";
 
 const Home = () => {
   return (
     <Page>
-      <Head>
-        <title>Home | Yağızhan Avcı</title>
-      </Head>
       <div className="mt-6">
         <h1 className="my-6 text-3xl font-bold tracking-tight text-black inline-blockmb-4 md:text-5xl dark:text-white">
           Hey, I’m Yağızhan Avcı

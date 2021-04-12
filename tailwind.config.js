@@ -9,6 +9,13 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", ...fontFamily.sans],
       },
+      textColor: {
+        ts: "#2b7489",
+        js: "#f1e05a",
+        css: "#563d7c",
+        html: "#e34c26",
+        vue: "#2c3e50",
+      },
     },
   },
   variants: {

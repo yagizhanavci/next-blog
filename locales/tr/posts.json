@@ -1,0 +1,5 @@
+{
+  "allPosts": "Tüm Yazılar ({{count}})",
+  "placeholder": "Yazı ara",
+  "noPosts": "Yazı bulunamadı."
+}

@@ -1,9 +1,12 @@
 import { Loader, Page, RepoCard, Searchbar } from "@/components";
+import useTranslation from "next-translate/useTranslation";
 import React, { useEffect } from "react";
 
 interface IReposProps {}
 
 const Repos: React.FC<IReposProps> = () => {
+  const { t } = useTranslation();
+
   const [loading, setLoading] = React.useState<boolean>(true);
   const [repos, setRepos] = React.useState<any[]>([]);
   const [filteredRepos, setFilteredRepos] = React.useState<any[]>([]);
@@ -37,9 +40,13 @@ const Repos: React.FC<IReposProps> = () => {
   return (
     <Page title="Repos - Yağızhan Avcı">
       <h1 className="mb-4 text-2xl font-bold tracking-tight text-black my-7 md:text-3xl dark:text-white">
-        All Repositories ({filteredRepos.length})
+        {t("repos:allRepos", { count: filteredRepos.length })}
+        {/* All Repositories ({filteredRepos.length}) */}
       </h1>
-      <Searchbar onChange={onSearchChange} placeholder="Search repos" />
+      <Searchbar
+        onChange={onSearchChange}
+        placeholder={t("repos:placeholder")}
+      />
       {loading ? (
         <Loader />
       ) : (
@@ -49,7 +56,7 @@ const Repos: React.FC<IReposProps> = () => {
           ))}
           {filteredRepos.length === 0 && (
             <p className="mb-4 text-gray-600 dark:text-gray-400">
-              No repos found.
+              {t("repos:noRepos")}
             </p>
           )}
         </div>

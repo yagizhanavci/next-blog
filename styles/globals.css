@@ -48,7 +48,13 @@ body {
     @apply mr-4;
   }
   .header nav li a {
-    @apply relative block  py-4 capitalize font-semibold;
+    @apply relative block  py-4 capitalize font-semibold text-gray-600 dark:text-gray-300;
+  }
+  .header nav li a:not(.active):hover {
+    @apply text-black dark:text-white;
+  }
+  .header nav li a.active {
+    @apply text-black dark:text-white;
   }
   .header nav li a.active:after {
     content: "";

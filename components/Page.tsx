@@ -1,6 +1,8 @@
 import { Footer, Header } from "@/components";
+import useTranslation from "next-translate/useTranslation";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import React from "react";
 
 interface IPageProps {
   title?: string;
@@ -12,14 +14,18 @@ interface IPageProps {
 
 export const Page: React.FC<IPageProps> = ({ children, ...customMeta }) => {
   const router = useRouter();
+  const { t } = useTranslation();
 
-  const meta = {
-    title: "Yağızhan Avcı – Software Developer.",
-    description: `Front-end web and mobile developer, TypeScript and React enthusiast.`,
-    // image: 'https://leerob.io/static/images/banner.png',
-    type: "website",
-    ...customMeta,
-  };
+  const meta = React.useMemo(
+    () => ({
+      title: t("common:pageTitle"),
+      description: t("common:pageDescription"),
+      // image: 'https://leerob.io/static/images/banner.png',
+      type: "website",
+      ...customMeta,
+    }),
+    [customMeta],
+  );
 
   return (
     <div className="root">

@@ -38,10 +38,9 @@ const Repos: React.FC<IReposProps> = () => {
   };
 
   return (
-    <Page title="Repos - Yağızhan Avcı">
+    <Page title={t("repos:pageTitle")}>
       <h1 className="mb-4 text-2xl font-bold tracking-tight text-black my-7 md:text-3xl dark:text-white">
         {t("repos:allRepos", { count: filteredRepos.length })}
-        {/* All Repositories ({filteredRepos.length}) */}
       </h1>
       <Searchbar
         onChange={onSearchChange}

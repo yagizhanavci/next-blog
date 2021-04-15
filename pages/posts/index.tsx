@@ -36,7 +36,7 @@ const Posts: React.FC<IPostsProps> = ({ posts }) => {
   }, [locale]);
 
   return (
-    <Page title="Posts - Yağızhan Avcı">
+    <Page title={t("posts:pageTitle")}>
       <h1 className="mb-4 text-2xl font-bold tracking-tight text-black my-7 md:text-3xl dark:text-white">
         {t("posts:allPosts", { count: filteredPosts.length })}
       </h1>

@@ -1,11 +1,13 @@
 import { ArrowLeft, IconButton, mdxComponents, Page } from "@/components";
 import { Post } from "@/models";
 import { format, parseISO } from "date-fns";
+import { enUS, tr } from "date-fns/locale";
 import fs from "fs";
 import { GetStaticPathsContext } from "next";
 import { getMdxNode } from "next-mdx";
 import { useHydrate } from "next-mdx/client";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import path from "path";
 
 interface IPostProps {
@@ -14,6 +16,7 @@ interface IPostProps {
 
 const PostPage: React.FC<IPostProps> = ({ post }) => {
   const content = useHydrate(post, { components: mdxComponents });
+  const { locale } = useRouter();
 
   return (
     <Page
@@ -23,14 +26,7 @@ const PostPage: React.FC<IPostProps> = ({ post }) => {
       date={new Date(post.frontMatter.date).toISOString()}
       type="article"
     >
-      <div className="flex justify-start sticky top-[56px] bg-white dark:bg-black py-2 z-50">
-        <IconButton
-          text="Posts"
-          icon={<ArrowLeft className="w-6 h-6 text-indigo-500" />}
-          href="/posts"
-        />
-      </div>
-      <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
+      <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mt-8 mb-8">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
           {post.frontMatter.title}
         </h1>
@@ -45,11 +41,20 @@ const PostPage: React.FC<IPostProps> = ({ post }) => {
           <p className="ml-2 text-sm text-gray-700 dark:text-gray-300">
             <span className="font-semibold">Yağızhan Avcı</span>
             {" / "}
-            {format(parseISO(post.frontMatter.date), "MMMM dd, yyyy")}
+            {format(parseISO(post.frontMatter.date), "MMMM dd, yyyy", {
+              locale: locale === "en" ? enUS : tr,
+            })}
           </p>
         </div>
         <div className="w-full prose dark:prose-dark max-w-none">{content}</div>
       </article>
+      <div className="flex justify-start py-4 -mx-4 bg-white dark:bg-black">
+        <IconButton
+          text="Posts"
+          icon={<ArrowLeft className="w-6 h-6 text-indigo-500" />}
+          href="/posts"
+        />
+      </div>
     </Page>
   );
 };

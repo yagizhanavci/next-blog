@@ -1,9 +1,12 @@
 import { ArrowLeft, IconButton, mdxComponents, Page } from "@/components";
 import { Post } from "@/models";
 import { format, parseISO } from "date-fns";
-import { getMdxNode, getMdxPaths } from "next-mdx";
+import fs from "fs";
+import { GetStaticPathsContext } from "next";
+import { getMdxNode } from "next-mdx";
 import { useHydrate } from "next-mdx/client";
 import Image from "next/image";
+import path from "path";
 
 interface IPostProps {
   post: Post;
@@ -53,15 +56,29 @@ const PostPage: React.FC<IPostProps> = ({ post }) => {
 
 export default PostPage;
 
-export async function getStaticPaths() {
+export async function getStaticPaths({ locales }: GetStaticPathsContext) {
+  const paths: Array<{ params: { slug: string[] }; locale: string }> = [];
+  locales.forEach((locale) => {
+    const postsDirectory = path.join(
+      process.cwd(),
+      `./content/posts/${locale}`,
+    );
+    let postSlugs = fs.readdirSync(postsDirectory);
+    postSlugs = postSlugs.map((slug) => slug.split(".mdx")[0]);
+    const postPaths = postSlugs.map((slug) => ({
+      params: { slug: [slug] },
+      locale,
+    }));
+    paths.push(...postPaths);
+  });
   return {
-    paths: await getMdxPaths("post"),
+    paths: paths,
     fallback: false,
   };
 }
 
 export async function getStaticProps(context: any) {
-  const post = await getMdxNode<Post>("post", context);
+  const post = await getMdxNode<Post>(context.locale, context);
 
   if (!post) {
     return {

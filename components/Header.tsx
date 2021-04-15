@@ -1,11 +1,10 @@
-import { Moon, Sun, Toggle } from "@/components";
+import { Dropdown, IconButton, Moon, Sun, Toggle } from "@/components";
 import { useTheme } from "@/hooks";
+import { flags } from "@/utils";
 import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
-import { Dropdown } from "./Dropdown";
-import { IconButton } from "./IconButton";
 
 interface IHeaderProps {}
 
@@ -52,7 +51,7 @@ export const Header: React.FC<IHeaderProps> = () => {
           onChange={onLocaleChange}
           options={locales.map((locale) => ({
             key: locale,
-            text: locale === "en-US" ? "🇬🇧  en" : "🇹🇷 tr",
+            text: flags[locale],
           }))}
         />
         <div className="hidden sm:inline-flex">

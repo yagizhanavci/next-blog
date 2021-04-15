@@ -1,7 +1,13 @@
 {
-  "post": {
-    "contentPath": "content/posts",
+  "en": {
+    "contentPath": "content/posts/en",
     "basePath": "/posts",
+    "sortBy": "date",
+    "sortOrder": "desc"
+  },
+  "tr": {
+    "contentPath": "content/posts/tr",
+    "basePath": "/tr/posts",
     "sortBy": "date",
     "sortOrder": "desc"
   }

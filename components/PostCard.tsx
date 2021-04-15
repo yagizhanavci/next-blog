@@ -1,14 +1,15 @@
+import { Post } from "@/models";
 import { format, parseISO } from "date-fns";
-import { Node, NodeFrontMatter } from "next-mdx";
 import Link from "next/link";
 
 interface IPostCardProps {
-  post: Node<NodeFrontMatter>;
+  post: Post;
+  locale: string;
 }
 
-export const PostCard: React.FC<IPostCardProps> = ({ post }) => {
+export const PostCard: React.FC<IPostCardProps> = ({ post, locale }) => {
   return (
-    <Link href={post.url}>
+    <Link href={post.url} locale={locale}>
       <a className="flex flex-col space-y-2 postcard">
         <h2 className="text-2xl font-bold">{post.frontMatter.title}</h2>
         <p>{post.frontMatter.excerpt}</p>

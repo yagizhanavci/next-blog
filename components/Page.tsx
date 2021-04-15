@@ -35,6 +35,17 @@ export const Page: React.FC<IPageProps> = ({ children, ...customMeta }) => {
           rel="canonical"
           href={`https://yagizhanavci.vercel.app${router.asPath}`}
         />
+        <link
+          rel="alternate"
+          hrefLang="en-US"
+          href="https://yagizhanavci.vercel.app"
+        />
+        <link
+          rel="alternate"
+          hrefLang="tr"
+          href="https://yagizhanavci.vercel.app/tr"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Yağızhan Avcı" />
         <meta property="og:description" content={meta.description} />

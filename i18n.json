@@ -1,10 +1,11 @@
 {
-  "locales": ["en-US", "tr"],
-  "defaultLocale": "en-US",
+  "locales": ["en", "tr"],
+  "defaultLocale": "en",
   "pages": {
     "*": ["common"],
     "/": ["common", "home"],
     "/posts": ["common", "posts"],
-    "/repos": ["common", "repos"]
+    "/repos": ["common", "repos"],
+    "/404": ["common", "404"]
   }
 }

@@ -6,6 +6,7 @@
     "/": ["common", "home"],
     "/posts": ["common", "posts"],
     "/repos": ["common", "repos"],
-    "/404": ["common", "404"]
+    "/404": ["common", "404"],
+    "/posts/[...slug]": ["common", "post"]
   }
 }

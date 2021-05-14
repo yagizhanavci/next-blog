@@ -1,4 +1,4 @@
-import { Dropdown, IconButton, Moon, Sun, Toggle } from "@/components";
+import { IconButton, Moon, Select, Sun, Toggle } from "@/components";
 import { useTheme } from "@/hooks";
 import { flags } from "@/utils";
 import useTranslation from "next-translate/useTranslation";
@@ -45,22 +45,23 @@ export const Header: React.FC<IHeaderProps> = () => {
         </ul>
       </nav>
       <div className="flex items-center space-x-2 sm:space-x-4">
-        <Dropdown
+        <Select
           value={locale}
-          placeholder="Select locale"
+          placeholder={t("common:selectLanguage")}
           onChange={onLocaleChange}
           options={locales.map((locale) => ({
-            key: locale,
-            text: flags[locale],
+            value: locale,
+            label: flags[locale],
           }))}
         />
         <div className="hidden sm:inline-flex">
           <Toggle
             prefixContent={<Sun />}
             suffixContent={<Moon />}
-            name="theme"
-            onToggle={theme.onToggle}
-            value={theme.isDarkTheme}
+            onChange={theme.onToggle}
+            checked={theme.isDarkTheme}
+            ariaLabel="Change Theme"
+            ariaDescription="Click to change theme of the website"
           />
         </div>
         <div className="inline-flex sm:hidden">

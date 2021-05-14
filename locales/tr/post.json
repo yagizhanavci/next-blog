@@ -1,3 +1,4 @@
 {
-  "readingTime": "{{minutes}} dakikalık okuma"
+  "readingTime": "{{minutes}} dakikalık okuma",
+  "allPosts": "Tüm Yazılar"
 }

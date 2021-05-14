@@ -1,5 +1,6 @@
 export * from "./ArrowLeft";
 export * from "./CaretIcon";
+export * from "./CheckIcon";
 export * from "./CssIcon";
 export * from "./DotIcon";
 export * from "./EnglishFlag";

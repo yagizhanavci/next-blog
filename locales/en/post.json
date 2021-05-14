@@ -1,3 +1,4 @@
 {
-  "readingTime": "{{minutes}} min{{s}} read"
+  "readingTime": "{{minutes}} min{{s}} read",
+  "allPosts": "All Posts"
 }

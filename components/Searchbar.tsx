@@ -20,7 +20,7 @@ export const Searchbar: React.FC<ISearchbarProps> = ({
         type="text"
         placeholder={placeholder}
         onChange={({ target: { value } }) => onChange(value)}
-        className="block w-full px-4 py-2 pl-10 text-gray-900 bg-white border border-gray-300 rounded-md dark:border-gray-900 focus:ring focus:ring-indigo-500 focus:outline-none focus:border-indigo-500 dark:bg-gray-800 dark:text-gray-100"
+        className="block w-full px-4 py-2 pl-10 text-gray-900 bg-white border border-gray-300 rounded-md outline-none dark:border-gray-900 dark:border-none focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-800 dark:text-gray-100"
       />
     </div>
   );

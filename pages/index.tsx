@@ -11,6 +11,7 @@ import React from "react";
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
+
   return (
     <Page>
       <div className="mt-6">

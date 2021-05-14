@@ -1,4 +1,3 @@
-export * from "./Dropdown";
 export * from "./Footer";
 export * from "./Header";
 export * from "./IconButton";
@@ -9,4 +8,5 @@ export * from "./Page";
 export * from "./PostCard";
 export * from "./RepoCard";
 export * from "./Searchbar";
+export * from "./Select";
 export * from "./Toggle";

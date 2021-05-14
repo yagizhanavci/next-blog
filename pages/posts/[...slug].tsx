@@ -62,7 +62,7 @@ const PostPage: React.FC<IPostProps> = ({ post }) => {
       </article>
       <div className="flex justify-start py-4 -mx-4 bg-white dark:bg-black">
         <IconButton
-          text="Posts"
+          text={t("post:allPosts")}
           icon={<ArrowLeft className="w-6 h-6 text-indigo-500" />}
           href="/posts"
         />

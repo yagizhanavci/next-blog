@@ -37,7 +37,7 @@ export const Select: React.FC<ISelectProps> = ({
             {open && (
               <Listbox.Options
                 as={motion.div}
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ type: "spring", duration: 0.8 }}
                 static

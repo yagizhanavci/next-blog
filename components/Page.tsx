@@ -20,7 +20,7 @@ export const Page: React.FC<IPageProps> = ({ children, ...customMeta }) => {
     () => ({
       title: t("common:pageTitle"),
       description: t("common:pageDescription"),
-      // image: 'https://leerob.io/static/images/banner.png',
+      image: "https://yagizhanavci.com.tr/static/images/avatar.jpeg",
       type: "website",
       ...customMeta,
     }),

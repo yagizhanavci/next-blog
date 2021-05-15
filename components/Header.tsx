@@ -66,6 +66,11 @@ export const Header: React.FC<IHeaderProps> = () => {
         </div>
         <div className="inline-flex sm:hidden">
           <IconButton
+            ariaLabel={
+              theme.isDarkTheme
+                ? "Change to light theme"
+                : "Change to dark theme"
+            }
             icon={theme.isDarkTheme ? <Sun /> : <Moon />}
             onClick={() => theme.onToggle(!theme.isDarkTheme)}
           />

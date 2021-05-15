@@ -52,6 +52,7 @@ export const IconButton: React.FC<IconButtonProps> = ({
 
   return (
     <button
+      aria-label={ariaLabel}
       onClick={onClick}
       className={`flex items-center self-start text-black dark:text-white focus:ring focus:ring-indigo-500 focus:outline-none focus:border-indigo-500 ${
         text !== undefined ? "px-4" : "px-2"

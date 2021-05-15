@@ -48,23 +48,23 @@ const projects = {
         "React Native",
       ],
     },
-    {
-      title: "HUQQA IMS",
-      description:
-        "HUQQA IMS is an intergrated management system for HuQQa company. This application provides modules like meeting, accounting, purchasing, workorders, job advertisements etc.",
-      img: "/static/images/huqqa.jpg",
-      href: "http://im.qfoodbeverage.com",
-      tags: [
-        "Frontend",
-        "Web",
-        "Mobile",
-        "Microfrontend",
-        "iOS",
-        "Android",
-        "React",
-        "React Native",
-      ],
-    },
+    // {
+    //   title: "HUQQA IMS",
+    //   description:
+    //     "HUQQA IMS is an intergrated management system for HuQQa company. This application provides modules like meeting, accounting, purchasing, workorders, job advertisements etc.",
+    //   img: "/static/images/huqqa.jpg",
+    //   href: "http://im.qfoodbeverage.com",
+    //   tags: [
+    //     "Frontend",
+    //     "Web",
+    //     "Mobile",
+    //     "Microfrontend",
+    //     "iOS",
+    //     "Android",
+    //     "React",
+    //     "React Native",
+    //   ],
+    // },
   ],
   tr: [
     {
@@ -101,23 +101,23 @@ const projects = {
         "React Native",
       ],
     },
-    {
-      title: "HUQQA IMS",
-      description:
-        "HUQQA IMS HuQQa şirketi için bir entegre yönetim sistemi uygulamasıdır. Bu uygulama toplantı, satın alma, iş akışı ve iş ilanları gibi modüller sağlar.",
-      img: "/static/images/huqqa.jpg",
-      href: "http://im.qfoodbeverage.com",
-      tags: [
-        "Frontend",
-        "Web",
-        "Mobile",
-        "Microfrontend",
-        "iOS",
-        "Android",
-        "React",
-        "React Native",
-      ],
-    },
+    // {
+    //   title: "HUQQA IMS",
+    //   description:
+    //     "HUQQA IMS HuQQa şirketi için bir entegre yönetim sistemi uygulamasıdır. Bu uygulama toplantı, satın alma, iş akışı ve iş ilanları gibi modüller sağlar.",
+    //   img: "/static/images/huqqa.jpg",
+    //   href: "http://im.qfoodbeverage.com",
+    //   tags: [
+    //     "Frontend",
+    //     "Web",
+    //     "Mobile",
+    //     "Microfrontend",
+    //     "iOS",
+    //     "Android",
+    //     "React",
+    //     "React Native",
+    //   ],
+    // },
   ],
 };
 
@@ -143,13 +143,25 @@ const Home: React.FC = () => {
           <NodeIcon className="w-10 h-10 sm:w-12 sm:h-12" />
         </section>
         <section className="my-10">
-          <h2 className="my-8 text-2xl font-extrabold tracking-tight text-black md:text-4xl dark:text-white">
+          <h2 className="my-8 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
             {t("home:projects")}
           </h2>
           {projects[locale].map((project: IProject, index: number) => (
             <ProjectCard project={project} key={index} />
           ))}
         </section>
+        {/* <section className="my-10">
+          <h2 className="my-8 text-2xl font-extrabold tracking-tight text-black md:text-4xl dark:text-white">
+            My Tech Stack
+          </h2>
+          <a
+            // frameBorder="0"
+            data-theme="light"
+            data-layers="1,2,3,4"
+            data-stack-embed="true"
+            href="https://embed.stackshare.io/stacks/embed/65c71113beaf2d5a7a81e5a6ca912e"
+          />
+        </section> */}
       </div>
     </Page>
   );

@@ -12,10 +12,19 @@ class MyDocument extends Document {
             type="font/woff2"
             crossOrigin="anonymous"
           />
+          <meta name="yandex-verification" content="46d9f89f2ff3f3e1" />
+          <meta
+            content="dd1TwCL86tqk92cmgiC9e88fHVAyWx374Xs_iQB2MOY"
+            name="google-site-verification"
+          />
         </Head>
         <body className="font-sans antialiased text-black bg-white dark:bg-black dark:text-white">
           <Main />
           <NextScript />
+          {/* <script
+            async
+            src="https://cdn1.stackshare.io/javascripts/client-code.js"
+          ></script> */}
         </body>
       </Html>
     );

@@ -9,11 +9,13 @@ export const Footer: React.FC<IFooterProps> = () => {
         icon={<GithubIcon className="w-6 h-6 text-black dark:text-white" />}
         external
         href="https://github.com/yagizhanavci"
+        ariaLabel="Github Profile"
       />
       <IconButton
         icon={<LinkedinIcon className="w-6 h-6 text-black dark:text-white" />}
         external
         href="https://www.linkedin.com/in/ya%C4%9F%C4%B1zhan-avc%C4%B1-b06556181/"
+        ariaLabel="Linkedin Profile"
       />
     </footer>
   );

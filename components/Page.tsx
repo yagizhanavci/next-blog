@@ -35,21 +35,21 @@ export const Page: React.FC<IPageProps> = ({ children, ...customMeta }) => {
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"
-          content={`https://yagizhanavci.vercel.app${router.asPath}`}
+          content={`https://yagizhanavci.com.tr${router.asPath}`}
         />
         <link
           rel="canonical"
-          href={`https://yagizhanavci.vercel.app${router.asPath}`}
+          href={`https://yagizhanavci.com.tr${router.asPath}`}
         />
         <link
           rel="alternate"
           hrefLang="en-US"
-          href="https://yagizhanavci.vercel.app"
+          href={`https://yagizhanavci.com.tr${router.asPath}`}
         />
         <link
           rel="alternate"
           hrefLang="tr"
-          href="https://yagizhanavci.vercel.app/tr"
+          href={`https://yagizhanavci.com.tr/tr${router.asPath}`}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:type" content={meta.type} />

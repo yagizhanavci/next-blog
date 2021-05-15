@@ -9,6 +9,7 @@ interface IProjectCardProps {
 export const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
   return (
     <a
+      rel="noopener noreferrer"
       href={project.href}
       target="_blank"
       className="flex flex-col p-4 mb-4 transition-all border border-gray-300 rounded-md cursor-pointer dark:border-gray-800 hover:shadow-md"
@@ -23,9 +24,9 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
           />
         </div>
         <div>
-          <h4 className="text-lg font-bold tracking-tight text-gray-900 dark:text-gray-100">
+          <h3 className="text-lg font-bold tracking-tight text-gray-900 dark:text-gray-100">
             {project.title}
-          </h4>
+          </h3>
           <p className="leading-5 text-gray-700 dark:text-gray-300">
             {project.description}
           </p>

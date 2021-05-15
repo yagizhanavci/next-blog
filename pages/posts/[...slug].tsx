@@ -26,7 +26,7 @@ const PostPage: React.FC<IPostProps> = ({ post }) => {
     <Page
       title={`${post.frontMatter.title} - Yağızhan Avcı`}
       description={post.frontMatter.excerpt}
-      image={`https://yagizhanavci.vercel.app${post.frontMatter.image}`}
+      image={`https://yagizhanavci.com.tr${post.frontMatter.image}`}
       date={new Date(post.frontMatter.date).toISOString()}
       type="article"
     >

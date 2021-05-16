@@ -9,6 +9,7 @@ export * from "./Github";
 export * from "./HtmlIcon";
 export * from "./JsIcon";
 export * from "./LinkedinIcon";
+export * from "./MailIcon";
 export * from "./Moon";
 export * from "./NodeIcon";
 export * from "./ReactIcon";

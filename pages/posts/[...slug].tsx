@@ -22,6 +22,7 @@ const PostPage: React.FC<IPostProps> = ({ post }) => {
   const { locale } = useRouter();
   const stats = readingTime(post.content);
   stats.minutes = Math.ceil(stats.minutes);
+
   return (
     <Page
       title={`${post.frontMatter.title} - Yağızhan Avcı`}
@@ -34,7 +35,7 @@ const PostPage: React.FC<IPostProps> = ({ post }) => {
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
           {post.frontMatter.title}
         </h1>
-        <div className="flex items-center justify-between w-full mt-2 mb-4 space-x-2">
+        <div className="flex flex-col items-start justify-between w-full mt-2 mb-4 space-x-0 space-y-2 sm:space-x-2 sm:items-center sm:flex-row sm:space-y-0">
           <div className="flex items-center">
             <Image
               alt="Yağızhan Avcı"
@@ -44,14 +45,16 @@ const PostPage: React.FC<IPostProps> = ({ post }) => {
               className="rounded-full"
             />
             <p className="ml-2 text-sm text-gray-700 dark:text-gray-300">
-              <span className="font-semibold">Yağızhan Avcı</span>
-              {" / "}
-              {format(parseISO(post.frontMatter.date), "MMMM dd, yyyy", {
-                locale: locale === "en" ? enUS : tr,
-              })}
+              <span className="font-semibold">
+                Yağızhan Avcı
+                {" /  "}
+                {format(parseISO(post.frontMatter.date), "MMMM dd, yyyy", {
+                  locale: locale === "en" ? enUS : tr,
+                })}
+              </span>
             </p>
           </div>
-          <span className="text-sm text-gray-700 dark:text-gray-300">
+          <span className="text-sm text-gray-500">
             {t("post:readingTime", {
               s: stats.minutes > 1 ? "s" : "",
               minutes: stats.minutes,

@@ -18,7 +18,7 @@ class MyDocument extends Document {
             name="google-site-verification"
           />
         </Head>
-        <body className="font-sans antialiased text-black bg-white dark:bg-black dark:text-white">
+        <body className="font-sans antialiased text-black bg-white theme-switch dark:bg-black dark:text-white">
           <Main />
           <NextScript />
           {/* <script

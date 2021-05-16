@@ -31,12 +31,6 @@ export const Page: React.FC<IPageProps> = ({ children, ...customMeta }) => {
     <div className="root">
       <Head>
         <title>{meta.title}</title>
-        <meta name="robots" content="follow, index" />
-        <meta content={meta.description} name="description" />
-        <meta
-          property="og:url"
-          content={`https://yagizhanavci.com.tr${router.asPath}`}
-        />
         <link
           rel="canonical"
           href={`https://yagizhanavci.com.tr${router.asPath}`}
@@ -51,6 +45,20 @@ export const Page: React.FC<IPageProps> = ({ children, ...customMeta }) => {
           hrefLang="tr"
           href={`https://yagizhanavci.com.tr/tr${router.asPath}`}
         />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta
+          name="viewport"
+          content="initial-scale=1, viewport-fit=cover, user-scalable=no"
+        />
+        <meta name="robots" content="follow, index" />
+        <meta content={meta.description} name="description" />
+        <meta
+          property="og:url"
+          content={`https://yagizhanavci.com.tr${router.asPath}`}
+        />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Yağızhan Avcı" />

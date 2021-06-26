@@ -5,7 +5,7 @@
 ## Tech Stack
 * Nextjs
 * React
-* Typescript
+* TypeScript
 * Tailwindcss
 
 ## Features

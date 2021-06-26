@@ -25,10 +25,6 @@ class MyDocument extends Document {
         >
           <Main />
           <NextScript />
-          {/* <script
-            async
-            src="https://cdn1.stackshare.io/javascripts/client-code.js"
-          ></script> */}
         </body>
       </Html>
     );

@@ -1,10 +1,9 @@
 import {
   CssIcon,
   HtmlIcon,
-  JsIcon,
-  NodeIcon,
+  JsIcon, NodeIcon,
   Page,
-  ReactIcon,
+  ReactIcon
 } from "@/components";
 import { ProjectCard } from "@/components/ProjectCard";
 import { projects } from "@/content";
@@ -42,17 +41,6 @@ const Home: React.FC = () => {
             <ProjectCard project={project} key={index} />
           ))}
         </section>
-        {/* <section className="my-10">
-          <h2 className="my-8 text-2xl font-extrabold tracking-tight text-black md:text-4xl dark:text-white">
-            My Tech Stack
-          </h2>
-          <a
-            data-theme="light"
-            data-layers="1,2,3,4"
-            data-stack-embed="true"
-            href="https://embed.stackshare.io/stacks/embed/65c71113beaf2d5a7a81e5a6ca912e"
-          />
-        </section> */}
       </div>
     </Page>
   );
